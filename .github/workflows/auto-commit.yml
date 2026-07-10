@@ -2,7 +2,7 @@ name: Auto Commit
 
 on:
   schedule:
-    - cron: '0 */6 * * *'   # har 6 ghante (00, 06, 12, 18 UTC)
+    - cron: '0 */6 * * *'   # 00, 06, 12, 18 UTC
   workflow_dispatch:
 
 permissions:
@@ -17,7 +17,7 @@ jobs:
       - name: Make random commits
         run: |
           git config user.name "faizanali2k05"
-          git config user.email "faizanali15111511@gmail.com"
+          git config user.email "165537437+faizanali2k05@users.noreply.github.com"
 
           COUNT=$(( (RANDOM % 2) + 2 ))   # 2-3 commits per run
           for i in $(seq 1 $COUNT); do
